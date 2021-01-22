@@ -93,8 +93,8 @@ const engineerQuestions = [
     
         {
             type: "input",
-            name: "github",
-            message: "What is your github?"
+            name: "gitHub",
+            message: "What is your gitHub?"
         },
     
     ];
@@ -109,16 +109,16 @@ const engineerQuestions = [
         
         }
     
-        const employeeQuestions = [
+        const internQuestions = [
             {
                 type: "input",
-                name: "employeeName",
+                name: "internName",
                 message: "What is your name?"
             },
         
             {
                 type: "input",
-                name: "employeeId",
+                name: "internId",
                 message: "What is your ID?"
             },
         
@@ -130,15 +130,15 @@ const engineerQuestions = [
                 
         ];
         
-        function addEmployee(){
-        inquirer.prompt(employeeQuestions).then (answers =>{
+        function addIntern(){
+        inquirer.prompt(internQuestions).then (answers =>{
             console.log(answers);
-            const employee = new employee(answers.employeeName, answers.employeeId, answers.emailAddress)
-            team.push(employee)
+            const intern = new intern(answers.internName, answers.internId, answers.emailAddress)
+            team.push(intern)
         
         })
         }
 
 addManager();
 addEngineer();
-addEmployee();
+addIntern();
